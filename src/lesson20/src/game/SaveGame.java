@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class SaveGame implements Serializable {
 
-    private String[] territoriesInfo;
+    private transient String[] territoriesInfo; // попробуйте запустить без transient
     private String[] resourcesInfo;
     private String[] diplomaticInfo;
 

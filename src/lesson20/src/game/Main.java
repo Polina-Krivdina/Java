@@ -2,6 +2,12 @@ package lesson20.src.game;
 
 import java.io.*;
 
+/**
+ * это вам небольшая практика потрогать сериализацию и десериализацию
+ * Посмотрите, как она работает
+ * Подумайте, почему сравнение по equals дает такой ответ?
+ */
+
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
@@ -11,13 +17,13 @@ public class Main {
 
         SaveGame saveGameSAVES = new SaveGame(territoriesInfo, resourcesInfo, diplomaticInfo);
 
-        FileOutputStream outputStream = new FileOutputStream("C:\\Users\\yalekseenko\\Desktop\\save.txt");
+        FileOutputStream outputStream = new FileOutputStream("C:\\...путь к вашему файлу\\Desktop\\save.txt");
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(outputStream);
 
         objectOutputStream.writeObject(saveGameSAVES);
         objectOutputStream.close();
 
-        FileInputStream fileInputStream = new FileInputStream("C:\\Users\\yalekseenko\\Desktop\\save.txt");
+        FileInputStream fileInputStream = new FileInputStream("C:\\...путь к вашему файлу\\Desktop\\save.txt");
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
 
         SaveGame saveGameLoad = (SaveGame) objectInputStream.readObject();

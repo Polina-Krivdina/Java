@@ -1,5 +1,3 @@
-package lesson20.src.game;
-
 import java.nio.file.*;
 
 /**

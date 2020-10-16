@@ -3,6 +3,7 @@ package homeTaskStocks;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class NetUtitilies {
             System.out.println("Unable to retrieve stocks for IBM");
         }
 
-        return Collections.emptyList();
+        return new ArrayList<>();
     }
 
     private List<Stock> convertCsvToStocks(String result) {

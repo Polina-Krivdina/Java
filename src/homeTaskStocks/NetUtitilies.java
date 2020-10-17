@@ -26,7 +26,7 @@ public class NetUtitilies {
             System.out.println("Unable to retrieve stocks for IBM");
         }
 
-        return Collections.emptyList();
+        return new LinkedList();
     }
 
     private List<Stock> convertCsvToStocks(String result) {
